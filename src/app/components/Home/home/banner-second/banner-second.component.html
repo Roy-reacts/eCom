@@ -1,0 +1,195 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<section>
+
+    <p-carousel [value]="products" styleClass="custom-carousel" [numVisible]="3" [numScroll]="1" [circular]="true"
+        [autoplayInterval]="3000" [responsiveOptions]="responsiveOptions">
+        <ng-template pTemplate="header">
+            <h3 class="text-center">Top Category Products</h3>
+        </ng-template>
+        <ng-template let-product pTemplate="item">
+            <div class="product-item">
+                <div class="product-item-content">
+                    <div class="p-mb-3">
+                    </div>
+                    <div>
+                        <h4 class="p-mb-1">{{product.name}}</h4>
+                        <h6 class="p-mt-0 p-mb-3">${{product.price}}</h6>
+                        <span
+                            [class]="'product-badge status-'+product.inventoryStatus.toLowerCase()">{{product.inventoryStatus}}</span>
+                        <div class="car-buttons p-mt-5">
+                            <p-button type="button" styleClass="p-button p-button-rounded p-mr-2" icon="pi pi-search">
+                            </p-button>
+                            <p-button type="button" styleClass="p-button-success p-button-rounded p-mr-2"
+                                icon="pi pi-star"></p-button>
+                            <p-button type="button" styleClass="p-button-help p-button-rounded" icon="pi pi-cog">
+                            </p-button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+    </p-carousel>
+
+</section>
+
+<section class="container">
+    <div class="img-div">
+        <div>
+            <a>
+                <div>
+                    <img src="https://adminapi.applegadgetsbd.com/storage/media/large/Galaxy%20Tab%20S8+%20-%20Section%20image%20-%20683%20x%20438-7053.png"
+                        width="452px" height="290px" alt="">
+                </div>
+            </a>
+        </div>
+        <div>
+            <a>
+                <div>
+                    <img src="https://adminapi.applegadgetsbd.com/storage/media/large/Apple%20Watch%20S7%20-%20Section%20image%20-%20683%20x%20438-7589.png"
+                        width="452px" height="290px" alt="">
+                </div>
+            </a>
+        </div>
+        <div>
+            <a>
+                <div>
+                    <img src="https://adminapi.applegadgetsbd.com/storage/media/large/Xiaomi-Mi-12X---Section-image----683-x-438.png-6852.jpg"
+                        width="452px" height="290px" alt="">
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<section class="container ">
+    <div class="div-brand mt-3">
+        <div>
+            <h3 class="text-center"><b>Shop By Brands</b></h3>
+        </div>
+        <div class="mt-1 d-flex gap-3">
+            <div>
+                <a>
+                    <div class="logo-brand">
+                        <img width="88px" src="https://adminapi.applegadgetsbd.com/storage/media/medium/Apple-6176.png"
+                            alt="">
+                    </div>
+                </a>
+            </div>
+            <div>
+                <a>
+                    <div class="logo-brand">
+                        <img width="88px"
+                            src="https://adminapi.applegadgetsbd.com/storage/media/medium/Samsung-4680.png" alt="">
+                    </div>
+                </a>
+            </div>
+            <div>
+                <a>
+                    <div class="logo-brand">
+                        <img width="88px"
+                            src="https://adminapi.applegadgetsbd.com/storage/media/medium/Oneplus-9091.png" alt="">
+                    </div>
+                </a>
+            </div>
+            <div>
+                <a>
+                    <div class="logo-brand">
+                        <img width="88px" src="https://adminapi.applegadgetsbd.com/storage/media/medium/Xiaomi-1934.png"
+                            alt="">
+                    </div>
+                </a>
+            </div>
+            <div>
+                <a href="">
+                    <div class="logo-brand">
+                        <img width="88px" src="https://adminapi.applegadgetsbd.com/storage/media/medium/Sony-3098.png"
+                            alt="">
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="padding-slide">
+        <hr>
+        <div>
+
+
+            <div style="width: 100%; height: auto; text-align:center;">
+                <ng-image-slider #nav [images]="imageObject" [infinite]="false" [autoSlide]="1"
+                    [imageSize]="{width: '20%', height:'80px'}" slideImage="1"></ng-image-slider>
+            </div>
+        </div>
+        <hr>
+    </div>
+
+</section>
+
+
+<section>
+    <div class="container mt-4 pb-4">
+        <h3 style="color: #F17E23;" class="mb-4">Gadget Shop in Bangladesh</h3>
+        <p>Are you looking for some useful gadgets that can make your life easier? Apple Gadgets is the perfect gadget
+            shop in Bangladesh with a vast collection of useful gadgets with the most attractive prices in Bangladesh!
+            At Apple Gadgets, you can get all your desired gadgets for the best price - laptop carry bags, table lamps,
+            trimmers, water bottles, smart scales, smart tags, coolers, and many more! Quality is something where Apple
+            Gadgets makes no compromise. So whichever gadget you’re getting we can assure you that you won’t be
+            disappointed with the quality. The EMI and exchange facility will surely make your purchases easier.
+            Besides, you can get your desired Apple products delivered to your doorstep in the safest possible way or
+            you can pick it up from the Bashundhara City Shopping Complex or Jamuna Future Park outlet by yourself if
+            you want to ensure the highest quality. So hurry up and visit Apple Gadgets now - one of the most reliable
+            and highly approved gadget shops in Dhaka, Bangladesh!
+
+        </p>
+    </div>
+    <div class="container mt-4 pb-4">
+        <h3 style="color: #F17E23;" class="mb-4">Mobile accessories online shop in Bangladesh</h3>
+
+        <p>Tired of searching for a trustworthy online shop for mobile accessories? Look no farther! Apple Gadgets is
+            the most recommended online shop for mobile accessories in Bangladesh, with a vast collection of accessories
+            for the best price in BD! Mobile accessories make your day-to-day usage convenient, productive and
+            entertaining. Apple Gadgets, on the other hand, makes your mobile accessories purchasing convenient, fast,
+            and entertaining! You can get tons of mobile accessories listed on our website at the most attractive price
+            in the market! From genuine branded accessories like Apple or Samsung chargers, cables, covers, and styluses
+            to budget-friendly phone covers, cables, and power banks - you can get them all at Apple Gadgets! You can
+            order everything online and get your orders delivered to your doorstep or you can visit our Bashundhara City
+            Shopping Complex or Jamuna Future Park outlets for convenient pick-ups or spot purchases. Hurry up and visit
+            Apple Gadgets now - one of the most reliable and highly approved online shops for mobile accessories in
+            Dhaka, Bangladesh!</p>
+    </div>
+    <div class="container mt-4 pb-4">
+        <h3 style="color: #F17E23;" class="mb-4">Smartwatch online shop in Bangladesh</h3>
+
+        <p>Looking for a reliable smartwatch shop to step up your style and lifestyle? Apple Gadgets’ got you covered!
+            Apple Gadgets - the most approved online shop for smartwatches in Bangladesh! Smartwatches are one of the
+            most sought-after accessories in the market. They can not only step up your style but also boost your
+            lifestyle by working as a smart lifestyle and fitness partner! Keep track of your health, fitness goals, and
+            all your notifications in the smartest way with high-quality smartwatches from popular brands like - Apple,
+            Samsung, OnePlus, Amazfit, and FitBit to budget-friendly brands like Zeblaze, WiWu, Xiaomi, and many more!
+            You can order everything online and get your orders delivered to your doorstep or you can visit our
+            Bashundhara City Shopping Complex or Jamuna Future Park outlets for convenient pick-ups or spot purchases.
+            You can enjoy EMI as well for the premium smartwatches for easy purchasing experience! Hurry up and visit
+            Apple Gadgets now - one of the most reliable and highly approved online shops for smartwatches in Dhaka,
+            Bangladesh!</p>
+    </div>
+
+    <div class="container mt-4 pb-4">
+        <h3 style="color: #F17E23;" class="mb-4">Online headphone shop in Bangladesh</h3>
+
+        <p>Are you a music lover looking for a trusted online shop for headphones? Apple Gadgets’ got you covered! Apple
+            Gadgets - the most approved online shop for headphones in Bangladesh! If you’re someone who loves music,
+            movies, or games then headphones are a must for the full personal experience. Dive into the realm of beats
+            and tune with high-quality headphones from brands like Sony, Bose, Beats, Apple, Marshal, Jabra, JBL, Razer,
+            and Anker or from budget brands like Edifier, Baseus, Joyroom, WiWu, and many more! You can also get earbuds
+            from different brands as well like Apple, Samsung, OnePlus, Sony, Edifier, Anker, Xiaomi, Realme, etc. You
+            can order everything online and get your orders delivered to your doorstep or you can visit our Bashundhara
+            City Shopping Complex or Jamuna Future Park outlets for convenient pick-ups or spot purchases. You can enjoy
+            EMI as well for the premium smartwatches for an easy purchasing experience! Hurry up and visit Apple Gadgets
+            now - one of the trustiest and most highly approved online shops for headphones in Dhaka, Bangladesh!</p>
+    </div>
+
+</section>

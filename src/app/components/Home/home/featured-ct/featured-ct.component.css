@@ -1,0 +1,33 @@
+.logo{
+    padding: 24px 8px;
+}
+a{
+    text-decoration: none;
+}
+
+.icon{
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    gap: 15px;
+}
+
+img{
+    filter: grayscale(100%);
+}
+
+img:hover{
+    filter: grayscale(0%);
+}
+p{
+    color: black;
+}
+
+
+@media all  and (max-width: 800px) {
+  .icon{
+      display: block;
+  }
+  .logo{
+      width: 100% !important;
+  }
+}

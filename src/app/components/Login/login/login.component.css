@@ -1,0 +1,39 @@
+.frm{
+    width: 100% !important;
+}
+@media all and (min-width: 992px) {
+	.navbar .nav-item .dropdown-menu{ display: none;padding: 0.1rem 0.2rem;
+    border-radius: 0.2rem;  }
+	.navbar .nav-item:hover .nav-link{  display: inline-block;   }
+	.navbar .nav-item:hover .dropdown-menu{ display: block; position: static; }
+	.navbar .nav-item .dropdown-menu{ margin-top:0px; }
+
+}
+.example {
+  padding: 20px;
+  color: white;
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .example {background: red;}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .example {background: green;}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .example {background: blue;}
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .example {background: orange;}
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .example {background: pink;}
+}

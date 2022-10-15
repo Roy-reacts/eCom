@@ -1,0 +1,113 @@
+<header class="">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm">
+        <div class="container-fluid">
+          <a class="navbar-brand"  href="#">
+            <img src="https://img.freepik.com/free-psd/logo-mockup-grey-wall_35913-2122.jpg?w=740&t=st=1665560536~exp=1665561136~hmac=7004608df27070aba8e37b414dbf880b69c29c2aeff8811f4189d44033189da5" width="60" height="60" class="rounded-pill p-2 d-inline-block align-top-left " alt="">
+            SatkhiraGadget
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div id="navbarSupportedContent" class="collapse navbar-collapse">
+            <ul class="navbar-nav mx-auto ">
+              <!-- Megamenu-->
+              <li class="nav-item dropdown">
+                <a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown">  Item 1  </a>
+                 <ul class="dropdown-menu">
+                 <li><a class="dropdown-item" href="#"> Submenu item 1</a></li>
+                 <li><a class="dropdown-item" href="#"> Submenu item 2 </a></li>
+                 <li><a class="dropdown-item" href="#"> Submenu item 3 </a></li>
+                 </ul>
+             </li>
+             <li class="nav-item dropdown">
+              <a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown">  Item 2 </a>
+               <ul class="dropdown-menu">
+               <li><a class="dropdown-item" href="#"> Submenu item 1</a></li>
+               <li><a class="dropdown-item" href="#"> Submenu item 2 </a></li>
+               <li><a class="dropdown-item" href="#"> Submenu item 3 </a></li>
+               </ul>
+           </li>
+           <li class="nav-item dropdown">
+            <a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown">  Item 3  </a>
+             <ul class="dropdown-menu">
+             <li><a class="dropdown-item" href="#"> Submenu item 1</a></li>
+             <li><a class="dropdown-item" href="#"> Submenu item 2 </a></li>
+             <li><a class="dropdown-item" href="#"> Submenu item 3 </a></li>
+             </ul>
+         </li>
+              <li class="nav-item">
+                <a class="nav-link " routerLink="cart">Cart</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " routerLink="product-details">product-details</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link " routerLink="pre-order">Pre-Order</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link " (click)="openModal(template)">Account</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+    </nav>
+
+
+</header>
+
+<!-- modal log/reg -->
+
+<ng-template #template>
+  <div class="modal-header">
+    <div>
+
+    </div>
+    <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
+      <span aria-hidden="true" class="visually-hidden">&times;</span>
+    </button>
+  </div>
+ <div class="text-center">
+  <img width="176px" src="https://www.applegadgetsbd.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo-black.e8e1cc33.png&w=1920&q=75" alt="">
+ </div>
+  <div class="modal-body">
+    <div style="display: flex; justify-content: space-between; align-items: center;" class="px-5 mt-3">
+      <p (click)="checkCon('reg')" style="cursor:pointer ;">Register</p>
+      <p (click)="checkCon('login')" style="cursor:pointer ;">login</p>
+    </div>
+
+    <ng-container *ngIf="check == 'login'">
+      <app-login></app-login>
+    </ng-container>
+
+    <ng-container *ngIf="check == 'reg'">
+      <app-sign-up></app-sign-up>
+    </ng-container>
+
+  </div>
+</ng-template>
+
+
+
+<div class="sec-header">
+  <div class="d-flex list shadow-lg">
+    <li>Phones & Tablets</li>
+    <li>Laptop & Desktop
+        </li>
+    <li>Sound Equipment</li>
+    <li>Power & Accessories</li>
+    <li>Fitness & Wearable
+    </li>
+    <li>Peripherals</li>
+    <li>Media Streamers</li>
+    <li>Media Streamers</li>
+    <li>Smart Electronics</li>
+    <li>Used Devices</li>
+  </div>
+</div>

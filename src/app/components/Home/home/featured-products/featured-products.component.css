@@ -1,0 +1,33 @@
+a{
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+
+}
+a:hover{
+    color: orange;
+}
+
+.pCart:hover{
+    /* background-color: ; */
+    box-shadow: -4px -3px 45px 21px rgba(0,0,0,0.35);
+    border-radius: 5%;
+}
+
+.cart-main{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+}
+.btn-div{
+    margin-top: 40%;
+}
+
+@media all  and (max-width: 800px) {
+  .cart-main{
+      display: block;
+  }
+  .pCart{
+      width: 100% !important;
+  }
+}
+

@@ -1,0 +1,70 @@
+<section>
+    <div class="container pb-3">
+        <div class="row">
+            <div class="col-lg-8 mt-3">
+                <div class="card">
+                    <h4 class="p-3" style="background-color:#E1E1E1 ;">Products</h4>
+                    <div class="d-flex justify-content-between px-3">
+                        <div class="d-flex gap-5">
+                            <div>
+                               <div>
+                                <img width="80px" src="https://adminapi.applegadgetsbd.com/storage/media/thumb/MacBook-Air-M2-Space-Gray-5005.jpg"
+                                alt="">
+                                <p>
+                                    <span>
+                                        <button class="input-count" (click)="onDecrement()"> - </button>
+                                        <input class="input-count" type="text" value="{{votes}}">
+                                        <button class="input-count" (click)="onIncrement()"> + </button>
+                                    </span>
+                                </p>
+                               </div>
+                                    
+                            </div>
+                            <div>
+                                <p>MacBook Air M2 8/256GB 13.6-inch</p>
+                                <small>Brand:</small>
+                                <p>Space Gray,</p>
+                                <p>Unit Price: BDT 139000</p>
+
+                            </div>
+                           
+                        </div>
+                        <div style="display: flex; justify-content:center ; align-items: center;">
+                            <div><p class="text-center">❌</p>
+                                <p>BDT 139000</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mt-3">
+                <div class="card py-5">
+                    <p class="text-center">Your Cart(1) </p>
+                    <p class="text-center" style="opacity:.4 ;font-size: .813rem;padding-top: 1rem;">Start adding items to your cart</p>
+                    <p class="px-4 uppercase mt-4">Price Details</p>
+                    <hr>
+                    <div class="px-4">
+                        <div style="display:flex ; justify-content: space-between;">
+                            <p>Price</p>
+                            <p>BDT 278000</p>
+                        </div>
+                        <div style="display:flex ; justify-content: space-between;">
+                            <p>Delivery Charges</p>
+                            <p>(will be added)</p>
+                        </div>
+                        <hr>
+                        <div style="display:flex ; justify-content: space-between;">
+                            <p>Total Amount</p>
+                            <p>BDT 278000</p>
+                        </div>
+
+                        <div class="d-grid gap-2 col-6 mx-auto">
+                            <button class="btn btn-primary" type="submit" routerLink="/checkout">CHECK OUT</button>
+                           
+                          </div>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

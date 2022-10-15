@@ -1,0 +1,235 @@
+<section class="container mt-5 mb-3">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="row ">
+            <div class="col-lg-8 col-md-12 ">
+                <div class="card">
+                    <p style="background-color:#E1E1E1 ;" class="ps-3 py-3">Delivery Information</p>
+                    <div class="row px-2 pb-4">
+                        <div class="col-lg-5 col-md-4">
+
+                            <div class="form-group">
+                                <label>First Name*</label>
+                                <input type="text" formControlName="firstName" class="form-control"
+                                    [ngClass]="{ 'is-invalid': submitted && f['firstName'].errors }" />
+                                <div *ngIf="submitted && f['firstName'].errors" class="invalid-feedback">
+                                    <div *ngIf="f['firstName'].errors['required']">Firstname is required</div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Last Name*</label>
+                                <input type="text" formControlName="lastName" class="form-control"
+                                    [ngClass]="{ 'is-invalid': submitted && f['lastName'].errors }" />
+                                <div *ngIf="submitted && f['lastName'].errors" class="invalid-feedback">
+                                    <div *ngIf="f['lastName'].errors['required']"> Lastname is required</div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Phone Number*</label>
+                                <input type="number" formControlName="phone" class="form-control"
+                                    [ngClass]="{ 'is-invalid': submitted && f['phone'].errors }" />
+                                <div *ngIf="submitted && f['phone'].errors" class="invalid-feedback">
+                                    <div *ngIf="f['phone'].errors['required']">Phone Number is required</div>
+                                    <div *ngIf="f['phone'].errors['minlength']">
+                                        Phone Number must be 11 degit
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Email*</label>
+                                <input type="text" formControlName="email" class="form-control"
+                                    [ngClass]="{ 'is-invalid': submitted && f['email'].errors }" />
+                                <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
+                                    <div *ngIf="f['email'].errors['required']">Email is required</div>
+                                    <div *ngIf="f['email'].errors['email']">Email is invalid</div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- 2ND PART  -->
+
+                        <div class="col-lg-7 col-md-8">
+                            <div class="register-form">
+                                <div class="form-group">
+                                    <label for="division" class="form-label-sm">Division</label>
+                                    <select formControlName="division" name="division" id="division"
+                                        class="form-select-sm">
+                                        <option value="default" disabled="">Choose Your Division</option>
+                                        <option value="Dhaka">Dhaka</option>
+                                        <option value="Barisal">Barisal</option>
+                                        <option value="Chittagong">Chittagong</option>
+                                        <option value="Khulna">Khulna</option>
+                                        <option value="Mymensingh">Mymensingh</option>
+                                        <option value="Rajshahi">Rajshahi</option>
+                                        <option value="Rangpur">Rangpur</option>
+                                        <option value="Sylhet">Sylhet</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="city" class="form-label-sm">City</label>
+                                    <select formControlName="city" name="city" id="city" class="form-select-sm">
+                                        <option value="default" disabled="">Choose Your City</option>
+                                        <option value="Dhaka">Dhaka</option>
+                                        <option value="Barisal">Barisal</option>
+                                        <option value="Chittagong">Chittagong</option>
+                                        <option value="Khulna">Khulna</option>
+                                        <option value="Mymensingh">Mymensingh</option>
+                                        <option value="Rajshahi">Rajshahi</option>
+                                        <option value="Rangpur">Rangpur</option>
+                                        <option value="Sylhet">Sylhet</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="area" class="form-label-sm">Area</label>
+                                    <select formControlName="area" name="area" id="area" class="form-select-sm">
+                                        <option value="default" disabled="">Choose Your Area</option>
+                                        <option value="Dhaka">Dhaka</option>
+                                        <option value="Barisal">Barisal</option>
+                                        <option value="Chittagong">Chittagong</option>
+                                        <option value="Khulna">Khulna</option>
+                                        <option value="Mymensingh">Mymensingh</option>
+                                        <option value="Rajshahi">Rajshahi</option>
+                                        <option value="Rangpur">Rangpur</option>
+                                        <option value="Sylhet">Sylhet</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="deliveryType" class="form-label-sm">Delivery Type*</label>
+                                    <select formControlName="deliveryType" name="deliveryType" id="deliveryType"
+                                        class="form-select-sm"
+                                        [ngClass]="{ 'is-invalid': submitted && f['deliveryType'].errors }">
+                                        <option value="default" disabled="">Choose Your Delivery Type</option>
+                                        <option value="1">Free Delivery</option>
+                                        <option value="2">Out Side Dhaka</option>
+
+                                    </select>
+                                    <div *ngIf="submitted && f['deliveryType'].errors" class="invalid-feedback">
+                                        <div *ngIf="f['deliveryType'].errors['required']">Delivery Type is required
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Address 1*</label>
+                                    <input type="text" formControlName="addressOne" class="form-control"
+                                        [ngClass]="{ 'is-invalid': submitted && f['addressOne'].errors }" />
+                                    <div *ngIf="submitted && f['addressOne'].errors" class="invalid-feedback">
+                                        <div *ngIf="f['addressOne'].errors['required']">Address is required</div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Address 2</label>
+                                    <input type="text" formControlName="addressTwo" class="form-control" />
+
+                                </div>
+                                <div class="form-group">
+                                    <label>Note(optional)</label>
+                                    <textarea type="texta" formControlName="note" class="form-control" id="txtid"
+                                        name="txtname" rows="4" cols="10">
+                                    </textarea>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-12 ">
+                <div class="card">
+                    <p style="background-color:#E1E1E1 ;" class="ps-3 py-3">Order Summary</p>
+                    <div class="px-4">
+                        <div style="display:flex ; justify-content: space-between;">
+                            <div>
+                                <p>Product</p>
+                                <p>MacBook Air M2 8/256GB 13.6-inch</p>
+                            </div>
+                            <div>
+                                <p class="text-center">Price</p>
+                                <p>BDT 278000</p>
+                            </div>
+                        </div>
+
+                        <hr>
+                        <div style="display:flex ; justify-content: space-between;">
+                            <p>Total Price:</p>
+                            <p>BDT 278000</p>
+                        </div>
+                        <div style="display:flex ; justify-content: space-between;">
+                            <p>Delivery Charges:</p>
+                            <p>0</p>
+                        </div>
+                        <div>
+                            <p class="text-center">PAYMENT CHOICES</p>
+                            <div class="text-center">
+                                <label class="radio-inline pe-3">
+                                    <input type="radio" name="optradio" (click)="checkCon('cash')"> Cash On Delivery
+                                </label>
+
+                                <label class="radio-inline">
+                                    <input type="radio" name="optradio" (click)="checkCon('Online')"> Online Payment
+
+                                </label>
+                            </div>
+                            <div>
+                                <ng-container *ngIf="check == 'cash'">
+                                    <fieldset class="border p-2">
+                                        <legend  class="float-none w-auto p-2">MESSAGE</legend>
+                                        <p>কাস্টমার সার্ভিস প্রতিনিধি - 09678148148</p>
+                                     </fieldset>
+                                  </ng-container>
+                                <ng-container *ngIf="check == 'Online'">
+                                    <fieldset class="border p-2">
+                                        <legend  class="float-none w-auto p-2">MESSAGE</legend>
+                                        অর্ডার কনফার্ম এবং অ্যাডভান্স পেমেন্ট করার আগে আপনার কাঙ্খিত পণ্যটি আমাদের স্টকে আছে কি না সে ব্যাপারে আমাদের একজন কাস্টমার সার্ভিস প্রতিনিধির সাথে কথা বলে কনফার্ম হয়ে নেওয়ার জন্য অনুরোধ করা হলো। কাস্টমার সার্ভিস প্রতিনিধি - 09678148148
+                                     </fieldset>
+                                  </ng-container>
+                            </div>
+                            <!-- <div>
+                                <fieldset class="border p-2">
+                                    <legend  class="float-none w-auto p-2">MESSAGE</legend>
+                                    
+                                 </fieldset>
+                            </div> -->
+
+                            <div class="form-group form-check">
+                                <input type="checkbox" formControlName="acceptTerms" class="form-check-input text-center"
+                                    [ngClass]="{ 'is-invalid': submitted && f['acceptTerms'].errors }" />
+                                <label for="acceptTerms" class="form-check-label text-center">I have read and agree to the Terms and Conditions, Privacy Policy and Refund and Return Policy</label>
+                                <div *ngIf="submitted && f['acceptTerms'].errors" class="invalid-feedback">
+                                    Accept Terms is required
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="d-grid gap-2 col-6 mx-auto py-3">
+                            <button class="btn btn-primary" type="submit" routerLink="/checkout">Place Order</button>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </form>
+
+
+</section>
+
+<!-- <div>
+    <pre>{{ form.value | json }}</pre>
+</div> -->
