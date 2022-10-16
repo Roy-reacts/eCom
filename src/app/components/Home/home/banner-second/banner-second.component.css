@@ -36,11 +36,24 @@
 
 @media all and (max-width: 800px) {
 
+    
     .img-div{
-      display: block;
-    }
-    .logo-brand img{
       width: 100% !important;
+    }
+    .padding-slide{
+      width: 100% !important;
+    }
+    .product-image{
+      width: 100% !important;
+
+    }
+    .product-item-content{
+      width: 100% !important;
+
+    }
+    .slider-div{
+      width: 100% !important;
+
     }
 
 }
