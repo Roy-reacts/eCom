@@ -1,9 +1,10 @@
 import { SwiperModule } from 'swiper/angular';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+
 import { FormsModule } from '@angular/forms';
 import { NgImageSliderModule } from 'ng-image-slider';
-import {CarouselModule} from 'primeng/carousel';
+// import {CarouselModule} from 'primeng/carousel';
 import {ButtonModule} from 'primeng/button';
 import {ToastModule} from 'primeng/toast';
 
@@ -32,7 +33,7 @@ import { CheckoutComponent } from './components/Product/checkout/checkout.compon
 import { NotfoundComponent } from './components/notfound/notfound.component';
 import { PreorderComponent } from './components/Product/preorder/preorder.component';
 import { TopBrandsComponent } from './components/Home/home/top-brands/top-brands.component';
-
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { TopBrandsComponent } from './components/Home/home/top-brands/top-brands
     CheckoutComponent,
     NotfoundComponent,
     PreorderComponent,
-    TopBrandsComponent
+    TopBrandsComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -69,7 +71,8 @@ import { TopBrandsComponent } from './components/Home/home/top-brands/top-brands
     SwiperModule,
     TabViewModule,
     TabsModule,
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
+    CarouselModule
 
 
   ],

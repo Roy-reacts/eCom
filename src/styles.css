@@ -23,3 +23,10 @@
 } */
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.policy-product .owl-next,.policy-product .owl-prev{
+background: #fff!important;
+color: #000!important;
+height: 60px!important;
+width: 60px!important;
+border-radius: 50%!important;
+}
