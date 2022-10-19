@@ -30,7 +30,7 @@ p{
       grid-template-columns: repeat(4,minmax(0,1fr));
       row-gap: 0.5rem;
       margin-top: 2.5rem;
-      column-gap: 0.5rem;
+      column-gap: 0.25rem;
   }
   .logo{
       width: 100% !important;

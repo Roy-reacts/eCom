@@ -141,10 +141,13 @@ font-style: italic;
 }
 .policy-p-card{
   background: rgb(6, 207, 243);
-  padding: 20px 10px 10px 10px;
-  border-radius: 5px 10px 10px 10px;
+  padding: 20px 10px ;
+  border-radius: 5px ;
   border-bottom: 1px solid #afebf0;
+  border-right: #a8a8a8;
   position: relative;
+  box-sizing: border-box;
+
   /* top: -170px; */
 }
 .date
@@ -200,9 +203,22 @@ transition: all .3s ease;
 }
 .policy-p-card p
 {
-color: #a8a8a8;
+color: #ee1818;
 line-height: 21px;
 font-size: 14px;
 font-weight: 500;
 transition: all .3s ease;
+}
+.text-center {
+  text-align: center;
+}
+@media all  and (max-width: 800px) {
+  .containers{
+   
+
+      width: 100% !important;
+  }
+  .policy-p-card{
+    width: 100% !important;
+  }
 }
