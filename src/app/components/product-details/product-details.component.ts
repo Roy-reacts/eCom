@@ -28,14 +28,14 @@ export class ProductDetailsComponent implements OnInit {
   onIncrement(): void {
     this.votes += 1;
     }
-    
+
  onDecrement(): void {
   this.votes -= 1;
   }
 
   scrollableTabs: any[] = Array.from({ length: 50 }, (_, i) => ({ title: `Tab ${i + 1}`, content: `Tab ${i + 1} Content` }));
 
- 
+
 
 }
 

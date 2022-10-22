@@ -72,7 +72,9 @@
   <div class="containers">
 
     <owl-carousel-o [options]="customOptions">
-      <ng-template carouselSlide> <div class="policy-p-card" >
+
+      <ng-template carouselSlide>
+         <div class="policy-p-card" >
 
         <div class="policy-img">
           <a class="w-[145px] h-[145px] relative" href="/product/apple-watch-series-8"
@@ -408,7 +410,20 @@
           </p>
           <div class="grid grid-cols-2 gap-1"><button class="md:font-SFProDisplaySemibold text-2xs bg-primary border border-primary rounded py-1 px-1 md:px-2 text-white duration-300">Buy Now</button><button class="md:font-SFProDisplaySemibold text-2xs bg-white border border-primary rounded py-1 px-1 md:px-2 text-primary duration-300">Add to Cart</button></div>
       </div></div></ng-template>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+
     </owl-carousel-o>
+  </div>
     <!-- <div class="row">
 
       <div class="col-md-4">
@@ -421,6 +436,7 @@
 
       </div>
     </div> -->
-  </div>
+
+
 
 </section>

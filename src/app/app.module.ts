@@ -28,12 +28,15 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 import { LoginComponent } from './components/Login/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SignUpComponent } from './components/Login/sign-up/sign-up.component';
-import { CartComponent } from './components/Product/cart/cart.component';
+// import { CartComponent } from './components/Product/cart/cart.component';
 import { CheckoutComponent } from './components/Product/checkout/checkout.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
 import { PreorderComponent } from './components/Product/preorder/preorder.component';
 import { TopBrandsComponent } from './components/Home/home/top-brands/top-brands.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { CartComponent } from './components/cart/cart.component';
+import { ProductsComponent } from './components/products/products.component';
+import { FilterPipe } from './shared/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -50,11 +53,13 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     ProductDirective,
     LoginComponent,
     SignUpComponent,
-    CartComponent,
     CheckoutComponent,
     NotfoundComponent,
     PreorderComponent,
     TopBrandsComponent,
+    CartComponent,
+    ProductsComponent,
+    FilterPipe
 
   ],
   imports: [
@@ -72,7 +77,8 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     TabViewModule,
     TabsModule,
     ModalModule.forRoot(),
-    CarouselModule
+    CarouselModule,
+
 
 
   ],

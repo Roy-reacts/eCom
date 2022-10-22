@@ -22,6 +22,7 @@ a:hover{
     margin-top: 40%;
 }
 
+
 @media all  and (max-width: 800px) {
   .cart-main{
     display: grid;
