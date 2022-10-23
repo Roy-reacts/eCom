@@ -81,7 +81,7 @@ a:hover{
 .grid-cols-2 {
   grid-template-columns: repeat(2,minmax(0,1fr));
   justify-content: space-between;
-} */ */
+} */ 
 
 
 /* Magic https://notepad.pw/dozKF41xR4IHY5NlqjOK*/
@@ -214,7 +214,7 @@ transition: all .3s ease;
 }
 @media all  and (max-width: 800px) {
   .containers{
-   
+
 
       width: 100% !important;
   }
