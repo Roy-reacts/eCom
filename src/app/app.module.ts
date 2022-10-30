@@ -1,5 +1,5 @@
 import { SwiperModule } from 'swiper/angular';
-import { NgModule } from '@angular/core';
+import { NgModule , CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { FormsModule } from '@angular/forms';
@@ -79,9 +79,8 @@ import { FilterPipe } from './shared/filter.pipe';
     ModalModule.forRoot(),
     CarouselModule,
 
-
-
   ],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   providers: [],
   bootstrap: [AppComponent]
 })
